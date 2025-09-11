@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Grids</title>
+        <link rel="stylesheet" href="grid.css">
+        <style>
+            .front{
+                border:2px seagreen;
+                width:30%;
+                margin-top:5%;
+                margin-left: 35%;
+                padding:50px;
+                background-color: rgb(149, 115, 181);
+            }
+            .form{
+                display:grid;
+                grid-template-columns:1fr 2fr;
+                grid-gap:5px;
+            }
+            .button{
+                grid-column:span 3;
+            }
+            .button:hover{
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="front">
+        <form class ="form">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+            <label for="age">Age</label>
+            <input type="text" id="age" name="AGE" placeholder="Age">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">       
+            <label for="gender">Gender</label><br>
+            <input type ="radio" id="male" name="gender">male</button>
+            <input type="radio" id="female" name="gender">Female</button>
+            <button type="submit" value="SUBMIT">submit</button>
+        </form>
+        </div>
+    </body>
+</html>
