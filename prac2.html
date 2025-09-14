@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>;
+    </head>
+    <body>
+        <h3> this is heading 1</h3>
+        <h1> This is heading 2</h1>
+        <button id = "button">ClickHere</button>
+        <div class="greeting">
+            <p>this is class division</p>
+        </div>
+      <p id="output">this is p id</p>
+      <ul id ="list">
+        <li>defualt item</li>
+      </ul>
+      <button id="add">ADD Button</button>
+      <button id="preadd">PRE ADD Button</button>
+      <button id="remove">remove Button</button>
+      <button id="removel">remove last button</button>
+      <script>
+        $(document).ready(function(){
+            $("#button").click(function(){
+                $("h3").text("Button Clicked");
+                $("h1").text("Button Clicked D");
+                $(".greeting").css("background-color","green");
+                $("p").css("font-weight","bold");
+            })
+            $("#add").click(function(){
+      $("#list").append("<li>New Item appended from script</li>");
+    });
+    $("#preadd").click(function(){
+      $("#list").prepend("<li>New Item prepended from script</li>");
+    });
+    $("#remove").click(function(){
+      $("#list li:first").remove();
+    });
+    $("#removel").click(function(){
+      $("#list li:last").remove();
+    });
+    
+
+      $("#myInput").keydown(function(){
+      let val = $("#myInput").val();
+      $("#output").text(val);
+    });
+      $("#button").dblclick(function(){
+        $("h2").text("Button Clicked Twice!");
+        $("h3").text("Button Clicked! Twice Duplicate");
+        $(".greeting").css("background-color", "orange");
+        $("p").css("font-weight", "calibri");
+      });
+      $("#button").hover(function(){
+        $("h2").text("Button Clicked but Hovered!");
+        $("h3").text("Button  and Hovered! Duplicate");
+        $(".greeting").css("background-color", "cyan");
+        $("p").css("font-weight", "italic");
+      });
+    });
+            
+      </script>
+
+    </body>
+</html>
